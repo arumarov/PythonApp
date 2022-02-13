@@ -6,4 +6,6 @@ import view # импортируем view
 def button_click():
     value_a = view.get_value()
     value_b = view.get_value()
-    model.init() # производим инициализацию начальных значений
+    model.init(value_a, value_b) # производим инициализацию начальных значений
+    result = model.sum()
+    view.view_data(result)
