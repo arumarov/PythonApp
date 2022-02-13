@@ -1,6 +1,6 @@
 # Создаем модуль, обеспечивающий взаимодействие с пользователем
-def view_data(data):
-    print(f'sum = {data}')
+def view_data(data, title):
+    print(f'{title} = {data}')
 
 def get_value():
     return int(input('value = '))
