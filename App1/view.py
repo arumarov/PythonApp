@@ -1,5 +1,5 @@
 # Создаем модуль, обеспечивающий взаимодействие с пользователем
-def view(data):
+def view_data(data):
     print(data)
 
 def get_value():
