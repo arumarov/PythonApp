@@ -17,3 +17,6 @@ def get_wind_speed(sensor):
 
 def data_collection(sensor = 1):
     return (get_temperature(sensor), get_pressure(sensor), get_wind_speed(sensor))
+
+def data_collection(sensor = 1):
+    return (get_temperature(sensor), get_pressure(sensor), get_wind_speed(sensor))
