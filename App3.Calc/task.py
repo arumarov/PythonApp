@@ -20,7 +20,7 @@ print(a + b)
 # Рациональные числа:
 from fractions import Fraction
 
-a = Fraction(5, 8)
+a = Fraction(5, 9)
 b = Fraction(2, 6)
 
 print(a + b)
