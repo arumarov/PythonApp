@@ -1,6 +1,3 @@
-import menu
-
-menu.choise_number(a)
 
 def init_operation(b):
     if b == '+':
