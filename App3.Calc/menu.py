@@ -12,8 +12,8 @@ def choise_number(a):
         x2 = float(input())
         print('Введите второе вещественное число (для второго числа в выражении):')
         y2 = float(input())
-        res1 = get_complex_number_x(x1, y1)
-        res2 = get_complex_number_y(x2, y2)
+        x = get_complex_number_x(x1, y1)
+        y = get_complex_number_y(x2, y2)
     elif a == 2:
         print('Введите числитель (для первого числа в выражении):')
         x3 = int(input())
@@ -23,12 +23,12 @@ def choise_number(a):
         x4 = int(input())
         print('Введите знаменатель (для второго числа в выражении):')
         y4 = int(input())
-        res1 = get_rational_number_x(x3, y3)
-        res2 = get_rational_number_y(x4, y4)
+        x = get_rational_number_x(x3, y3)
+        y = get_rational_number_y(x4, y4)
     else:
-        res1 = print("Вы ввели неверное число")
-        res2 = print("Перезапустите программу")
-    return res1, res2
+        x = print("Вы ввели неверное число")
+        y = print("Перезапустите программу")
+    return x, y
 
 # Генерация комплексных чисел
 def get_complex_number_x(a, b):
@@ -57,4 +57,5 @@ print("Добро пожаловать в КАЛЬКУЛЯТОР v.1.0")
 print()
 print("С какими числами вы хотите работать? \nЕсли с комплексными - нажмите 1 \nЕсли с рациональными - нажмите 2")
 a = int(input())
-choise_number(a)
+print("Какое действие вы хотите совершить? Введите один из знаков: +, -, *, /")
+b = input()
