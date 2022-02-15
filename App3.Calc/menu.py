@@ -1,7 +1,10 @@
 # menu.py - запрашиваем у пользователя, с какими числами он хочет выполнять операции (рациональные или комплексные), просим
 # пользователя ввести данные, с которыми будут выполняться арифметические операции
-
 # Инициализация введенных числовых значений для дальнейших расчетов
+
+import modul_complex
+import modul_rational
+
 def choise_number_x(a):
     global x
     if a == 1:
@@ -35,7 +38,7 @@ def choise_number_y(a):
         y4 = int(input())
         y = get_rational_number_y(x4, y4)
     else:
-        y = print("Вы ввели неверное число")
+        y = print("Пожалуйста перезапустите программу")
     return y
 
 # Генерация комплексных чисел
@@ -48,23 +51,19 @@ def get_complex_number_y(x, y):
     return res
 
 # Генерация рациональных чисел
-def get_rational_number_x(a, b):
+def get_rational_number_x(x, y):
     from fractions import Fraction
-    res = Fraction(a, b)
+    res = Fraction(x, y)
     return res
 
-def get_rational_number_y(a, b):
+def get_rational_number_y(x, y):
     from fractions import Fraction
-    res = Fraction(a, b)
+    res = Fraction(x, y)
     return res
 
-# Запуск программы, выбор вида чисел
-print("Добро пожаловать в КАЛЬКУЛЯТОР v.1.0")
-print()
-print("С какими числами вы хотите работать? \nЕсли с комплексными - нажмите 1 \nЕсли с рациональными - нажмите 2")
-a = int(input())
-print("Какое действие вы хотите совершить? Введите один из знаков: +, -, *, /")
-b = input()
-
-x = choise_number_x(a)
-y = choise_number_x(a)
+def pull_result(a):
+    if a == 1:
+        res = modul_complex.init_operation(x, y)
+    elif a == 2:
+        res = modul_rational.init_operation(x, y)
+    return res

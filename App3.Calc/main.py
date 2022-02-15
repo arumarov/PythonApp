@@ -1,3 +1,3 @@
-import controller as c
+import controller
 
-c.button_click() # Нажимаем кнопку в контроллере
+controller.button_click_a() 

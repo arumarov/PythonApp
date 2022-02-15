@@ -1,9 +1,6 @@
-import menu
-b = menu.b
-x = menu.x
-y = menu.y
-
-def init_operation(b):
+def init_operation(x, y):
+    print("Какое действие вы хотите совершить? Введите один из знаков: +, -, *, /")
+    b = str(input())
     if b == '+':
         res = complex_add(x, y)
     if b == '-':
@@ -29,5 +26,3 @@ def complex_mult(x, y):
 def complex_divid(x, y):
     res = x / y
     return res
-
-print(init_operation(b))

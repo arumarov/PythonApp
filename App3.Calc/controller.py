@@ -1,11 +1,16 @@
-# Связывает menu.py и modul_complex и modul_rational
 import menu
-import modul_complex as complex
-import modul_rational as rational
 
-# создаем метод, создающий "кнопку", которую сможет "нажимать" пользователь
-def button_click():
-    value_a, value_b = menu.choise_number()
-    model.init(value_a, value_b) # производим инициализацию начальных значений
-    result = model.do_it()
-    view.view_data(result, "result")
+def button_click_a():
+     global a
+     print("Добро пожаловать в КАЛЬКУЛЯТОР v.1.0")
+     print()
+     print("С какими числами вы хотите работать? \nЕсли с комплексными - нажмите 1 \nЕсли с рациональными - нажмите 2")
+     a = int(input())
+     return a
+
+a = button_click_a()
+
+x = menu.choise_number_x(a)
+y = menu.choise_number_y(a)
+print(menu.pull_result(a))
+exit(0)

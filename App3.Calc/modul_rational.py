@@ -1,9 +1,6 @@
-import menu
-b = menu.b
-x = menu.x
-y = menu.y
-
-def init_operation(b):
+def init_operation(x, y):
+    print("Какое действие вы хотите совершить? Введите один из знаков: +, -, *, /")
+    b = str(input())
     if b == '+':
         res = fraction_add(x, y)
     if b == '-':
@@ -30,5 +27,3 @@ def fraction_mult(x, y):
 def fraction_divid(x, y):
     res = x / y
     return res
-
-print(init_operation(b))
