@@ -2,7 +2,9 @@
 # пользователя ввести данные, с которыми будут выполняться арифметические операции
 
 # Инициализация введенных числовых значений для дальнейших расчетов
-def choise_number(a): 
+def choise_number(a):
+    global x
+    global y 
     if a == 1:
         print('Введите первое вещественное число (для первого числа в выражении):')
         x1 = float(input())
@@ -43,19 +45,18 @@ def get_complex_number_y(a, b):
 def get_rational_number_x(a, b):
     from fractions import Fraction
     res = Fraction(a, b)
-    print(res)
     return res
 
 def get_rational_number_y(a, b):
     from fractions import Fraction
     res = Fraction(a, b)
-    print(res)
     return res
 
 # Запуск программы, выбор вида чисел
-print("Добро пожаловать в КАЛЬКУЛЯТОР v.1.0")
-print()
-print("С какими числами вы хотите работать? \nЕсли с комплексными - нажмите 1 \nЕсли с рациональными - нажмите 2")
-a = int(input())
-print("Какое действие вы хотите совершить? Введите один из знаков: +, -, *, /")
-b = input()
+def welcome():
+    print("Добро пожаловать в КАЛЬКУЛЯТОР v.1.0")
+    print()
+    print("С какими числами вы хотите работать? \nЕсли с комплексными - нажмите 1 \nЕсли с рациональными - нажмите 2")
+    a = int(input())
+    print("Какое действие вы хотите совершить? Введите один из знаков: +, -, *, /")
+    b = input()

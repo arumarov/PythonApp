@@ -1,25 +1,31 @@
-
-from fractions import Fraction
+import menu
+b = menu.b
+x = menu.x
+y = menu.y
 
 def init_operation(b):
     if b == '+':
-        complex_add(x, y)
+        fraction_add(x, y)
     if b == '-':
-        complex_sub(x, y)
+        fraction_sub(x, y)
     if b == '*':
-        complex_mult(x, y)
+        fraction_mult(x, y)
     if b == '/':
-        complex_divid(x, y)
+        fraction_divid(x, y)
 
 
 def fraction_add(a, b):
-    return a + b
+    res = a + b
+    return res
 
 def fraction_sub(a, b):
-    return a - b
+    res = a - b
+    return res
 
 def fraction_mult(a, b):
-    return a * b
+    res = a * b
+    return res
 
 def fraction_divid(a, b):
-    return a / b
+    res = a / b
+    return res

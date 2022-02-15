@@ -1,3 +1,7 @@
+import menu
+b = menu.b
+x = menu.x
+y = menu.y
 
 def init_operation(b):
     if b == '+':
@@ -11,13 +15,17 @@ def init_operation(b):
 
 
 def complex_add(a, b):
-    return a + b
+    res = a + b
+    return res
 
 def complex_sub(a, b):
-    return a - b
+    res = a - b
+    return res
 
 def complex_mult(a, b):
-    return a * b
+    res = a * b
+    return res
 
 def complex_divid(a, b):
-    return a / b
+    res = a / b
+    return res
