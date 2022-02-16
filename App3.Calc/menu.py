@@ -4,6 +4,7 @@
 
 import modul_complex
 import modul_rational
+import logger
 
 def choise_number_x(a):
     global x
@@ -64,6 +65,8 @@ def get_rational_number_y(x, y):
 def pull_result(a):
     if a == 1:
         res = modul_complex.init_operation(x, y)
+        logger.data_logger(x, y, res)
     elif a == 2:
         res = modul_rational.init_operation(x, y)
+        logger.data_logger(x, y, res)
     return res
